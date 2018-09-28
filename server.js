@@ -26,4 +26,4 @@ app.use('*', function (req, res) {
 
 // Inicia el servidor y se informa al usuario
 app.listen(serverPort);
-console.log(`[products] API escutando na porta ${serverPort}.`);
+console.log(`[products] API escuchando el puerto ${serverPort}.`);
