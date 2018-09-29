@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
-import Shelf from '../components/Shelf';
 import './App.css';
 
-class App extends Component {
-    
-    render() {
+import { Provider } from 'react-redux';
 
+
+import Shelf from '../components/shelf/Shelf';
+import Footer from '../components/Footer';
+import FloatCart from './../components/floatCart/FloatCart';
+
+import store from '../store';
+import Corner from '../components/github/Corner';
+
+
+class App extends Component {
+    render() {
         return (
-            <div className="App">
-            <Shelf />
-            </div>
-        );
+            <Provider store={store}>
+                <div className="App">
+                    <Corner />
+                    <main>
+                        <Shelf />
+                    </main>
+                    <Footer />
+                    <FloatCart />
+                </div>
+            </Provider>
+        )
     }
 }
 
